@@ -56,6 +56,7 @@
       sources = {
         diagnostics = {
           pylint.enable = true; # python
+          pylint.package = null;
           yamllint.enable = true; # yaml
         };
         formatting = {
