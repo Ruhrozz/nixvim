@@ -11,7 +11,7 @@
       };
       keymaps.lspBuf = {
         K = "hover";
-        gD = "references()";
+        gD = "references";
         gd = "definition";
         gi = "implementation";
         gt = "type_definition";
