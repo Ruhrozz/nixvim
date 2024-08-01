@@ -4,7 +4,8 @@
       enable = true;
       servers = {
         pyright.enable = true; # python
-        pyright.package = null;
+        pyright.autostart = true;
+
         lua-ls.enable = true; # lua
         nil-ls.enable = true; # nix
       };
