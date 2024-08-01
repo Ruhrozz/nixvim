@@ -9,6 +9,13 @@
         lua-ls.enable = true; # lua
         nil-ls.enable = true; # nix
       };
+      keymaps.lspBuf = {
+        K = "hover";
+        gD = "references";
+        gd = "definition";
+        gi = "implementation";
+        gt = "type_definition";
+      };
     };
 
     cmp = {
