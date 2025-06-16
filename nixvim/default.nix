@@ -1,7 +1,6 @@
 {
   imports = [
     # Plugins
-    ./plugins/bufferline.nix
     ./plugins/cmp.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
