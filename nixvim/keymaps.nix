@@ -1,5 +1,6 @@
 {
   keymaps = [
+    # - Apply last macro registry again
     {
       action = "@@";
       key = "Q";
@@ -35,6 +36,7 @@
       action = "<cmd>lua vim.lsp.buf.format({async = true})<CR>";
     }
 
+    # - Navigation in `luasnip`
     {
       action.__raw = ''function() require("luasnip").expand() end'';
       key = "<C-k>";
@@ -65,28 +67,36 @@
       mode = [ "i" "s" ];
       options.silent = true;
     }
+
+    # - Generate documentation
     {
       action = "<cmd>Neogen<cr>";
       key = "<leader>gd";
       mode = [ "n" ];
     }
-    # Open Neotree where VIM was launched
+
+    # - Open Neotree where VIM was launched
     {
       mode = "n";
       key = "\\";
       action = "<cmd>Neotree toggle dir=$PWD<CR>";
     }
-    # Open Neotree near opened file
+
+    # - Open Neotree near opened file
     {
       mode = "n";
       key = "|";
       action = "<cmd>Neotree toggle dir=%:p:h<CR>";
     }
+
+    # - Open syntaxis tree (plugin: Trouble)
     {
       mode = "n";
       key = "<leader>ts";
       action = "<cmd>Trouble symbols focus=true<cr>";
     }
+
+    # - Open error tree (plugin: Trouble)
     {
       mode = "n";
       key = "<leader>td";
