@@ -40,19 +40,19 @@
     {
       action.__raw = ''function() require("luasnip").expand() end'';
       key = "<C-k>";
-      mode = [ "i" ];
+      mode = [ "i" "n" ];
       options.silent = true;
     }
     {
       action.__raw = ''function() require("luasnip").jump(1) end'';
       key = "<C-l>";
-      mode = [ "i" "s" ];
+      mode = [ "i" "s" "n" ];
       options.silent = true;
     }
     {
       action.__raw = ''function() require("luasnip").jump(-1) end'';
       key = "<C-j>";
-      mode = [ "i" "s" ];
+      mode = [ "i" "s" "n" ];
       options.silent = true;
     }
     {
@@ -64,7 +64,7 @@
         end
       '';
       key = "<C-e>";
-      mode = [ "i" "s" ];
+      mode = [ "i" "s" "n" ];
       options.silent = true;
     }
 
