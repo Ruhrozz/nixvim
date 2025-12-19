@@ -17,6 +17,7 @@
     ./plugins/git-conflict.nix
     ./plugins/nvim-autopairs.nix
     ./plugins/tmux-navigator.nix
+    ./plugins/fugitive.nix
     # General
     ./keymaps.nix
     ./settings.nix
