@@ -14,6 +14,7 @@
     ./plugins/web-devicons.nix
     ./plugins/colorizer.nix
     ./plugins/comment.nix
+    ./plugins/gitsigns.nix
     ./plugins/git-conflict.nix
     ./plugins/nvim-autopairs.nix
     ./plugins/tmux-navigator.nix
