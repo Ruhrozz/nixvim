@@ -29,6 +29,21 @@
         "GitSignsChangedelete"
         "GitSignsChangedeleteNr"
         "GitSignsChangedeleteLn"
+        "GitSignsStagedAdd"
+        "GitSignsStagedAddNr"
+        "GitSignsStagedAddLn"
+        "GitSignsStagedChange"
+        "GitSignsStagedChangeNr"
+        "GitSignsStagedChangeLn"
+        "GitSignsStagedDelete"
+        "GitSignsStagedDeleteNr"
+        "GitSignsStagedDeleteLn"
+        "GitSignsStagedTopdelete"
+        "GitSignsStagedTopdeleteNr"
+        "GitSignsStagedTopdeleteLn"
+        "GitSignsStagedChangedelete"
+        "GitSignsStagedChangedeleteNr"
+        "GitSignsStagedChangedeleteLn"
       ];
       exclude_groups = [ "StatusLine" "CursorLine" ];
     };
