@@ -36,6 +36,109 @@
       action = "<cmd>lua vim.lsp.buf.format({async = true})<CR>";
     }
 
+    # - Stage current git hunk
+    {
+      mode = "n";
+      key = "<leader>ga";
+      action.__raw = ''
+        function()
+          local line = vim.fn.line(".")
+          require("gitsigns").stage_hunk({ line, line }, { greedy = false })
+        end
+      '';
+      options.silent = true;
+    }
+
+    # - Stage selected git lines
+    {
+      mode = "v";
+      key = "<leader>ga";
+      action.__raw = ''
+        function()
+          local start_line = vim.fn.line("v")
+          local end_line = vim.fn.line(".")
+          if start_line > end_line then
+            start_line, end_line = end_line, start_line
+          end
+          require("gitsigns").stage_hunk({ start_line, end_line }, { greedy = false })
+        end
+      '';
+      options.silent = true;
+    }
+
+    # - Reset current git hunk
+    {
+      mode = "n";
+      key = "<leader>gr";
+      action.__raw = ''function() require("gitsigns").reset_hunk() end'';
+      options.silent = true;
+    }
+
+    # - Reset selected git lines
+    {
+      mode = "v";
+      key = "<leader>gr";
+      action.__raw = ''
+        function()
+          local start_line = vim.fn.line("v")
+          local end_line = vim.fn.line(".")
+          if start_line > end_line then
+            start_line, end_line = end_line, start_line
+          end
+          require("gitsigns").reset_hunk({ start_line, end_line }, { greedy = false })
+        end
+      '';
+      options.silent = true;
+    }
+
+    # - Stage all git changes in current buffer
+    {
+      mode = "n";
+      key = "<leader>gA";
+      action.__raw = ''function() require("gitsigns").stage_buffer() end'';
+      options.silent = true;
+    }
+
+    # - Commit staged git changes
+    {
+      mode = "n";
+      key = "<leader>gc";
+      action = "<cmd>Git commit<CR>";
+      options.silent = true;
+    }
+
+    # - Open git diff
+    {
+      mode = "n";
+      key = "<leader>gd";
+      action = "<cmd>Gdiffsplit<CR>";
+      options.silent = true;
+    }
+
+    # - Push git commits
+    {
+      mode = "n";
+      key = "<leader>gp";
+      action = "<cmd>Git push<CR>";
+      options.silent = true;
+    }
+
+    # - Reset all git changes in current buffer
+    {
+      mode = "n";
+      key = "<leader>gR";
+      action.__raw = ''function() require("gitsigns").reset_buffer() end'';
+      options.silent = true;
+    }
+
+    # - Show git blame for current line
+    {
+      mode = "n";
+      key = "<leader>gb";
+      action.__raw = ''function() require("gitsigns").blame_line({ full = true }) end'';
+      options.silent = true;
+    }
+
     # - Navigation in `luasnip`
     {
       action.__raw = ''function() require("luasnip").expand() end'';
@@ -71,7 +174,7 @@
     # - Generate documentation
     {
       action = "<cmd>Neogen<cr>";
-      key = "<leader>gd";
+      key = "<leader>gD";
       mode = [ "n" ];
     }
 
