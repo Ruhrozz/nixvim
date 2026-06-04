@@ -66,15 +66,20 @@
       options.silent = true;
     }
 
-    # - Reset current git hunk
+    # - Restore current git line
     {
       mode = "n";
       key = "<leader>gr";
-      action.__raw = ''function() require("gitsigns").reset_hunk() end'';
+      action.__raw = ''
+        function()
+          local line = vim.fn.line(".")
+          require("gitsigns").reset_hunk({ line, line }, { greedy = false })
+        end
+      '';
       options.silent = true;
     }
 
-    # - Reset selected git lines
+    # - Restore selected git lines
     {
       mode = "v";
       key = "<leader>gr";
