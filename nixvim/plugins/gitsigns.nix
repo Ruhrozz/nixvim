@@ -1,4 +1,22 @@
 {
+  highlightOverride = {
+    GitSignsStagedAdd.link = "GitSignsAdd";
+    GitSignsStagedAddNr.link = "GitSignsAddNr";
+    GitSignsStagedAddLn.link = "GitSignsAddLn";
+    GitSignsStagedChange.link = "GitSignsChange";
+    GitSignsStagedChangeNr.link = "GitSignsChangeNr";
+    GitSignsStagedChangeLn.link = "GitSignsChangeLn";
+    GitSignsStagedDelete.link = "GitSignsDelete";
+    GitSignsStagedDeleteNr.link = "GitSignsDeleteNr";
+    GitSignsStagedDeleteLn.link = "GitSignsDeleteLn";
+    GitSignsStagedTopdelete.link = "GitSignsTopdelete";
+    GitSignsStagedTopdeleteNr.link = "GitSignsTopdeleteNr";
+    GitSignsStagedTopdeleteLn.link = "GitSignsTopdeleteLn";
+    GitSignsStagedChangedelete.link = "GitSignsChangedelete";
+    GitSignsStagedChangedeleteNr.link = "GitSignsChangedeleteNr";
+    GitSignsStagedChangedeleteLn.link = "GitSignsChangedeleteLn";
+  };
+
   plugins.gitsigns = {
     enable = true;
     settings = {
