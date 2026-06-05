@@ -10,6 +10,16 @@
       ruff = {
         enable = true;
         autostart = true;
+        settings = {
+          configurationPreference = "filesystemFirst";
+          configuration = {
+            "line-length" = 120;
+            lint = {
+              select = [ "E" "F" "I" ];
+              isort = { "force-single-line" = true; };
+            };
+          };
+        };
       }; # python
 
       nil_ls = {
