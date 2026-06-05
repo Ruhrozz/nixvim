@@ -2,6 +2,7 @@
   imports = [
     # Plugins
     ./plugins/cmp.nix
+    ./plugins/dap.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
     ./plugins/neogen.nix

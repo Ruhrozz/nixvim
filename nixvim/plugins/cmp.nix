@@ -27,7 +27,14 @@
           name = "buffer";
           keyword_length = 3;
         }
-        { name = "path"; }
+        {
+          name = "path";
+          option.get_cwd.__raw = ''
+            function()
+              return vim.env.PWD or vim.fn.getcwd(-1, -1)
+            end
+          '';
+        }
       ];
       mapping = {
         "<C-Space>" = "cmp.mapping.complete()";
