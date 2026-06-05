@@ -5,32 +5,8 @@
       diagnostics = {
         yamllint.enable = true; # yaml
         codespell.enable = true; # english
-        pylint = {
-          enable = true;
-          package = null;
-          settings = { extra_args = [ "--max-line-length" "120" ]; };
-        };
       };
       formatting = {
-        black = {
-          enable = true;
-          settings = { extra_args = [ "--line-length" "120" ]; };
-        }; # python
-        isort = {
-          enable = true;
-          settings = {
-            extra_args = [
-              "--profile"
-              "black"
-              "--line-length"
-              "120"
-              "--ensure_newline_before_comments"
-              "true"
-              "--force_single_line"
-              "true"
-            ];
-          };
-        }; # python
         nixfmt.enable = true; # nix
         yamlfmt.enable = true; # yaml
         codespell.enable = true; # english

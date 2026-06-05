@@ -7,6 +7,11 @@
         autostart = true;
       }; # python
 
+      ruff = {
+        enable = true;
+        autostart = true;
+      }; # python
+
       nil_ls = {
         enable = true;
         autostart = true;
